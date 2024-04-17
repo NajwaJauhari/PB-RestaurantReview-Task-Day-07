@@ -1,15 +1,22 @@
 package com.example.restaurantreview.data.response;
 
-import java.util.List;
 import com.google.gson.annotations.SerializedName;
+
+import java.util.List;
 
 public class Restaurant{
 
 	@SerializedName("customerReviews")
 	private List<CustomerReviewsItem> customerReviews;
 
+	@SerializedName("address")
+	private String address;
+
 	@SerializedName("pictureId")
 	private String pictureId;
+
+	@SerializedName("city")
+	private String city;
 
 	@SerializedName("name")
 	private String name;
@@ -27,8 +34,16 @@ public class Restaurant{
 		return customerReviews;
 	}
 
+	public String getAddress(){
+		return address;
+	}
+
 	public String getPictureId(){
 		return pictureId;
+	}
+
+	public String getCity(){
+		return city;
 	}
 
 	public String getName(){
